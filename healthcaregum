@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+
+<a id="kakao-link-btn" href="javascript:sendLink()">
+ <img src="https://i.ibb.co/nDQVr5t/image.png/image.png" alt="image" border="0"></a>
+</a>
+<script type="text/javascript">
+ Kakao.init('822703603ccf24278ce44538a17441d5');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '헬스케어굼',
+        description: '진짜 면역력 늘리는 비밀',
+        imageUrl:
+          'https://i.ibb.co/5npGdYp/210810-03.png',
+        link: {
+          mobileWebUrl: 'https://healthcaregum.wishpondpages.com/landing/',
+          webUrl: 'https://healthcaregum.wishpondpages.com/landing/',
+        },
+      },
+      social: {
+        likeCount: 59675, //99999가 최대입니다
+        commentCount: 15648, //99999가 최대입니다
+        sharedCount: 48969, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '면역력의 비밀',
+          link: {
+            mobileWebUrl: 'https://healthcaregum.wishpondpages.com/landing/',
+            webUrl: 'https://healthcaregum.wishpondpages.com/landing/',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!— www.blackcats4567.com —>
+
+  </body>
+</html>
